@@ -42,4 +42,19 @@ public class PessoaJuridica extends BasePessoa {
         this.inscricaoMunicipal = inscricaoMunicipal;
         this.nomeFantasia = nomeFantasia;
     }
+
+    @Override
+    public void Imprimir() {
+        System.out.println("Imprimir pessoa jurídica: ");
+        System.out.println("Id: " + this.idPessoa);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CNPJ: " + this.cnpj);
+    }
+
+    @Override
+    public String toString() {
+        return "PessoaJuridica [cnpj=" + cnpj + ", inscricaoEstadual=" + inscricaoEstadual + ", inscricaoMunicipal="
+                + inscricaoMunicipal + ", nomeFantasia=" + nomeFantasia + "]";
+    }
+
 }

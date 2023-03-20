@@ -75,4 +75,20 @@ public class PessoaFisica extends BasePessoa {
         this.nomePai = nomePai;
         this.nomeMae = nomeMae;
     }
+
+    @Override
+    public void Imprimir() {
+        System.out.println("Imprimir pessoa física: ");
+        System.out.println("Id: " + this.idPessoa);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+    }
+
+    @Override
+    public String toString() {
+        return "PessoaFisica [cpf=" + cpf + ", rg=" + rg + ", sexo=" + sexo + ", raca=" + raca + ", nacionalidade="
+                + nacionalidade + ", naturalidade=" + naturalidade + ", nomePai=" + nomePai + ", nomeMae=" + nomeMae
+                + "]";
+    }
+    
 }
