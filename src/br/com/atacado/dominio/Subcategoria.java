@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Subcategoria {
 
-    private int idSubcategoria;
+    private int id;
     private int idCategoria;
     private String descricao;
-    private LocalDate dataDeInclusao;
+    private LocalDate dataInclusao;
     private List<Produto> produtos;
 
-    public int getIdSubcategoria() {
-        return idSubcategoria;
+    public int getId() {
+        return id;
     }
-    public void setIdSubcategoria(int idSubcategoria) {
-        this.idSubcategoria = idSubcategoria;
+    public void setId(int idSubcategoria) {
+        this.id = idSubcategoria;
     }
     public int getIdCategoria() {
         return idCategoria;
@@ -30,10 +30,10 @@ public class Subcategoria {
         this.descricao = descricao;
     }
     public LocalDate getDataDeInclusao() {
-        return dataDeInclusao;
+        return dataInclusao;
     }
     public void setDataDeInclusao(LocalDate dataDeInclusao) {
-        this.dataDeInclusao = dataDeInclusao;
+        this.dataInclusao = dataDeInclusao;
     }
     public List<Produto> getProdutos() {
         return produtos;
@@ -46,9 +46,9 @@ public class Subcategoria {
     }
 
     public Subcategoria(int idSubcategoria, int idCategoria, String descricao, LocalDate dataDeInclusao) {
-        this.idSubcategoria = idSubcategoria;
+        this.id = idSubcategoria;
         this.idCategoria = idCategoria;
         this.descricao = descricao;
-        this.dataDeInclusao = dataDeInclusao;
+        this.dataInclusao = dataDeInclusao;
     }
 }

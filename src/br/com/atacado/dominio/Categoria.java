@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Categoria {
 
-    private int idCategoria;
+    private int id;
     private String descricao;
-    private LocalDate dataDeInclusao;
+    private LocalDate dataInclusao;
     private List<Subcategoria> subcategorias;
 
-    public int getIdCategoria() {
-        return idCategoria;
+    public int getId() {
+        return id;
     }
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setId(int idCategoria) {
+        this.id = idCategoria;
     }
     public String getDescricao() {
         return descricao;
@@ -24,10 +24,10 @@ public class Categoria {
         this.descricao = descricao;
     }
     public LocalDate getDataDeInclusao() {
-        return dataDeInclusao;
+        return dataInclusao;
     }
     public void setDataDeInclusao(LocalDate dataDeInclusao) {
-        this.dataDeInclusao = dataDeInclusao;
+        this.dataInclusao = dataDeInclusao;
     }
     public List<Subcategoria> getSubcategorias() {
         return subcategorias;
@@ -41,9 +41,9 @@ public class Categoria {
     }
 
     public Categoria(int idCategoria, String descricao, LocalDate dataDeInclusao) {
-        this.idCategoria = idCategoria;
+        this.id = idCategoria;
         this.descricao = descricao;
-        this.dataDeInclusao = dataDeInclusao;
+        this.dataInclusao = dataDeInclusao;
         this.subcategorias = new ArrayList<Subcategoria>();
     }
     

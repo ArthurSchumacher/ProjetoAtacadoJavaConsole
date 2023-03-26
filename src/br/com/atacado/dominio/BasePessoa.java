@@ -4,17 +4,17 @@ import java.time.LocalDate;
 
 public abstract class BasePessoa {
 
-    protected int idPessoa;
+    protected int id;
     protected String nome;
     protected String email;
     protected String site;
     protected LocalDate dataInclusao;
 
-    public int getIdPessoa() {
-        return idPessoa;
+    public int getId() {
+        return id;
     }
-    public void setIdPessoa(int idPessoa) {
-        this.idPessoa = idPessoa;
+    public void setId(int idPessoa) {
+        this.id = idPessoa;
     }
     public String getNome() {
         return nome;
@@ -42,7 +42,7 @@ public abstract class BasePessoa {
     }
 
     public BasePessoa(int idPessoa, String nome, String email, String site, LocalDate dataInclusao) {
-        this.idPessoa = idPessoa;
+        this.id = idPessoa;
         this.nome = nome;
         this.email = email;
         this.site = site;

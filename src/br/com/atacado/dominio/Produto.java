@@ -5,17 +5,17 @@ import java.time.LocalDate;
 
 public class Produto {
     
-    private int idProduto;
+    private int id;
     private int idSubcategoria;
     private String descricao;
     private BigDecimal valor;
-    private LocalDate dataDeInclusao;
+    private LocalDate dataInclusao;
 
-    public int getIdProduto() {
-        return idProduto;
+    public int getId() {
+        return id;
     }
-    public void setIdProduto(int idProduto) {
-        this.idProduto = idProduto;
+    public void setId(int idProduto) {
+        this.id = idProduto;
     }
     public int getIdSubcategoria() {
         return idSubcategoria;
@@ -36,20 +36,20 @@ public class Produto {
         this.valor = valor;
     }
     public LocalDate getDataDeInclusao() {
-        return dataDeInclusao;
+        return dataInclusao;
     }
     public void setDataDeInclusao(LocalDate dataDeInclusao) {
-        this.dataDeInclusao = dataDeInclusao;
+        this.dataInclusao = dataDeInclusao;
     }
     
     public Produto() {
     }
 
     public Produto(int idProduto, int idSubcategoria, String descricao, BigDecimal valor, LocalDate dataDeInclusao) {
-        this.idProduto = idProduto;
+        this.id = idProduto;
         this.idSubcategoria = idSubcategoria;
         this.descricao = descricao;
         this.valor = valor;
-        this.dataDeInclusao = dataDeInclusao;
+        this.dataInclusao = dataDeInclusao;
     }
 }

@@ -79,7 +79,7 @@ public class PessoaFisica extends BasePessoa {
     @Override
     public void Imprimir() {
         System.out.println("Imprimir pessoa física: ");
-        System.out.println("Id: " + this.idPessoa);
+        System.out.println("Id: " + this.id);
         System.out.println("Nome: " + this.nome);
         System.out.println("CPF: " + this.cpf);
     }

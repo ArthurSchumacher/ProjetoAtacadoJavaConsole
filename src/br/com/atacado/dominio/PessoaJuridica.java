@@ -46,7 +46,7 @@ public class PessoaJuridica extends BasePessoa {
     @Override
     public void Imprimir() {
         System.out.println("Imprimir pessoa jurídica: ");
-        System.out.println("Id: " + this.idPessoa);
+        System.out.println("Id: " + this.id);
         System.out.println("Nome: " + this.nome);
         System.out.println("CNPJ: " + this.cnpj);
     }
