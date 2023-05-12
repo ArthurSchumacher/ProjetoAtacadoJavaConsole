@@ -2,16 +2,16 @@ package br.com.atacado.repositorio;
 
 import java.util.List;
 
-public interface IBaseRepositorio<TTipo> {
+public interface IBaseRepositorio<T> {
 
-    TTipo Create(TTipo obj);
+    T Create(T obj);
 
-    TTipo Read(int chave);
+    T Read(int id);
 
-    List<TTipo> Read();
+    List<T> Read();
 
-    TTipo Update(TTipo obj);
+    T Update(T obj);
 
-    TTipo Delete(int chave);
+    T Delete(int id);
 
 }

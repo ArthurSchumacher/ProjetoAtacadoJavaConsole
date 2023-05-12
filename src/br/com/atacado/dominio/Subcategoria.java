@@ -51,4 +51,11 @@ public class Subcategoria {
         this.descricao = descricao;
         this.dataInclusao = dataDeInclusao;
     }
+
+    public Subcategoria(int codigo, String descricao, LocalDate dataDeInclusao, int codigoCategoria) {
+        this.id = codigo;
+        this.idCategoria = codigoCategoria;
+        this.descricao = descricao;
+        this.dataInclusao = dataDeInclusao;
+    }
 }

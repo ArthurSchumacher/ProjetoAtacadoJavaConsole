@@ -47,4 +47,12 @@ public class Categoria {
         this.subcategorias = new ArrayList<Subcategoria>();
     }
     
+    @Override
+    public String toString() {
+        return "Categoria [id=" + id + ", descricao=" + descricao + ", dataInclusao=" + dataInclusao
+                + ", subcategorias=" + subcategorias + "]";
+    }
+
+    
+    
 }

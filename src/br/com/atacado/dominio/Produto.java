@@ -1,62 +1,94 @@
 package br.com.atacado.dominio;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Produto {
-    
-    private int id;
-    private int idSubcategoria;
+
+    private int codigo;
+
+    private int codigoSubcategoria;
+
+    private int codigoCategoria;
+
     private String descricao;
-    private BigDecimal valor;
-    private LocalDate dataInclusao;
+
+    private double valor;
+
+    private LocalDate dataDeInclusao;
 
     public int getId() {
-        return id;
+        return codigo;
     }
-    public void setId(int idProduto) {
-        this.id = idProduto;
+
+    public void setId(int codigo) {
+        this.codigo = codigo;
     }
-    public int getIdSubcategoria() {
-        return idSubcategoria;
+
+    public int getCodigoSubcategoria() {
+        return codigoSubcategoria;
     }
-    public void setIdSubcategoria(int idSubcategoria) {
-        this.idSubcategoria = idSubcategoria;
+
+    public void setCodigoSubcategoria(int codigoSubcategoria) {
+        this.codigoSubcategoria = codigoSubcategoria;
     }
+
     public String getDescricao() {
         return descricao;
     }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public BigDecimal getValor() {
+
+    public double getValor() {
         return valor;
     }
-    public void setValor(BigDecimal valor) {
+
+    public void setValor(double valor) {
         this.valor = valor;
     }
+
     public LocalDate getDataDeInclusao() {
-        return dataInclusao;
+        return dataDeInclusao;
     }
+
     public void setDataDeInclusao(LocalDate dataDeInclusao) {
-        this.dataInclusao = dataDeInclusao;
+        this.dataDeInclusao = dataDeInclusao;
     }
-    
+
+    public int getCodigoCategoria() {
+        return codigoCategoria;
+    }
+
+    public void setCodigoCategoria(int codigoCategoria) {
+        this.codigoCategoria = codigoCategoria;
+    }
+
     public Produto() {
     }
 
-    public Produto(int idProduto, int idSubcategoria, String descricao, BigDecimal valor, LocalDate dataDeInclusao) {
-        this.id = idProduto;
-        this.idSubcategoria = idSubcategoria;
+    public Produto(int codigo, int codigoSubcategoria, String descricao, double valor, LocalDate dataDeInclusao) {
+        this.codigo = codigo;
+        this.codigoSubcategoria = codigoSubcategoria;
         this.descricao = descricao;
         this.valor = valor;
-        this.dataInclusao = dataDeInclusao;
-    }
-    @Override
-    public String toString() {
-        return "Produto [id=" + id + ", idSubcategoria=" + idSubcategoria + ", descricao=" + descricao + ", valor="
-                + valor + ", dataInclusao=" + dataInclusao + "]";
+        this.dataDeInclusao = dataDeInclusao;
     }
 
-    
+    public Produto(int codigo, int codigoSubcategoria, int codigoCategoria, String descricao,
+            LocalDate dataDeInclusao) {
+        this.codigo = codigo;
+        this.codigoSubcategoria = codigoSubcategoria;
+        this.codigoCategoria = codigoCategoria;
+        this.descricao = descricao;
+        this.valor = 0.0;
+        this.dataDeInclusao = dataDeInclusao;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto [codigo=" + codigo + ", codigoSubcategoria=" + codigoSubcategoria + ", descricao=" + descricao
+                + ", valor=" + valor + ", dataDeInclusao=" + dataDeInclusao + "]";
+    }
+
 }

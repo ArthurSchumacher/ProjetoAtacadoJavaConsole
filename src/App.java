@@ -1,11 +1,8 @@
-import br.com.atacado.dominio.Produto;
-import br.com.atacado.fakeDB.ProdutoFakeDB;
+import br.com.atacado.teste.TesteCategoriaRepositorio;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ProdutoFakeDB db = new ProdutoFakeDB();
-        for (Produto item : db.getTabela()) {
-            System.out.println(item.toString());
-        }
+        TesteCategoriaRepositorio teste = new TesteCategoriaRepositorio();
+        teste.Executar();
     }
 }

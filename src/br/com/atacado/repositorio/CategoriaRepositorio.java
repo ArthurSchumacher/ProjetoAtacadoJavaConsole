@@ -1,39 +1,52 @@
 package br.com.atacado.repositorio;
 
-import java.util.List;
-
 import br.com.atacado.dominio.Categoria;
+import br.com.atacado.fakeDB.CategoriaFakeDB;
 
-public class CategoriaRepositorio implements IBaseRepositorio<Categoria> {
+public class CategoriaRepositorio extends BaseRepositorio<Categoria> {
+    public CategoriaRepositorio() {
+        _tabela = new CategoriaFakeDB().getTabela();
+    }
 
     @Override
     public Categoria Create(Categoria obj) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Create'");
+        int chave = 0;
+        if (_tabela.size() == 0) {
+            chave++;
+        }
+        else {
+            int tamanho = _tabela.size();
+            chave = _tabela.get(tamanho - 1).getId() + 1;
+        }
+
+        obj.setId(chave);
+        _tabela.add(obj);
+        return obj;
     }
 
     @Override
     public Categoria Read(int chave) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Read'");
-    }
-
-    @Override
-    public List<Categoria> Read() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Read'");
+        Categoria res = new Categoria();
+        for (Categoria tupla : _tabela) {
+            if (tupla.getId() == chave) {
+                res = tupla;
+                break;
+            } else {
+                res = null;
+            }
+        }
+        return res;
     }
 
     @Override
     public Categoria Update(Categoria obj) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Update'");
-    }
+        Categoria alt = Read(obj.getId());
 
-    @Override
-    public Categoria Delete(int chave) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Delete'");
-    }
+        if (alt != null) {
+            alt.setDescricao(obj.getDescricao());
+        }
 
+        return alt;
+    }
 }
+
