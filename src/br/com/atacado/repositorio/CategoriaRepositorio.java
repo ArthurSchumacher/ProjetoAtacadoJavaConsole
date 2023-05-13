@@ -4,6 +4,7 @@ import br.com.atacado.dominio.Categoria;
 import br.com.atacado.fakeDB.CategoriaFakeDB;
 
 public class CategoriaRepositorio extends BaseRepositorio<Categoria> {
+    
     public CategoriaRepositorio() {
         _tabela = new CategoriaFakeDB().getTabela();
     }

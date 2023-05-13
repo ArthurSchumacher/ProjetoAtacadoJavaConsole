@@ -2,8 +2,6 @@ package br.com.atacado.repositorio;
 
 import java.util.List;
 
-import br.com.atacado.fakeDB.BaseFakeDB;
-
 public abstract class BaseRepositorio<T> implements IBaseRepositorio<T>{
 
     protected List<T> _tabela;
